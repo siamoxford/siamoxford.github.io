@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="/images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
+    <title>JAMS | Oxford SIAM-IMA Oxford Student Chapter</title>
+  </head>
+  <body>
+<!-- navbar -->
+    <div id="navbar-reuse"></div>
+<!-- Jumbotron -->
+
+
+<!-- sub navbar -->
+
+<!-- Text -->
+
+  <div class="container px-2 py-4">
+    <h1 class="text-info mt-5 mb-3">Junior Applied Maths Seminar (JAMS)</h1>
+    JAMS is the Junior Applied Mathematics Seminar run by graduate students, for graduate students! We aim to create a more relaxed environment for students to present their work and allow them to explain the current progress on their work. This also allows students to have more of a voice in post-talk discussions without more senior members dominating the discussion. There's free lunch afterwards for further discussion. <br><br>
+
+    If you wish to give a talk please contact our JAMS coordinator <a href="mailto:Ian.Roper@maths.ox.ac.uk">Ian Roper</a>.
+
+  </div>
+
+
+  <!-- Schedule -->
+  <div class="container px-2 py-4 text-center">
+
+      <a href="#" id="upcoming"><button type="button" id="upcomingbut" class="btn btn-secondary active">Upcoming</button></a>
+      <a href="#" id="past"><button type="button" id="pastbut" class="btn btn-secondary">Past</button></a>
+
+  </div>
+
+    <div id="seminars"></div>
+<!-- Footer -->
+    <div id="footer-reuse"></div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<script>
+
+  $(function(){
+    $('#seminars').load('php/future_seminars.php')
+  });
+
+  $('#upcoming').click(function(){
+    $('#seminars').load('php/future_seminars.php');
+    $('#upcomingbut').toggleClass("active");
+    $('#pastbut').toggleClass('active');
+  });
+  $('#past').click(function(){
+    $('#seminars').load('php/past_seminars.php');
+    $('#upcomingbut').toggleClass('active');
+    $('#pastbut').toggleClass('active');
+  });
+</script>
+
+<script>
+  $(function(){
+    $('#navbar-reuse').load('components/navbar.html')
+  });
+</script>
+
+
+<script>
+  $(function(){
+    $('#footer-reuse').load('components/footer.html')
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>

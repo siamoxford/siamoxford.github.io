@@ -1,0 +1,26 @@
+.navbar-dark {
+  background-color: #002147;
+}
+
+.dropdown-menu {
+  background-color: #002147;
+}
+.jumbotron-fluid{
+    /*background-image: url("../images/Merton.jpg");
+    background-size: cover; */
+    background-color: #f5f5f5;
+    /*color: #ffffff*/
+}
+
+.footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 1rem 0rem;
+}
+
+.card-front {
+  width: 90%;
+  text-align: left;
+}
