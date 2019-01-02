@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="/images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
+    <title>Conference '19 | Oxford SIAM-IMA Oxford Student Chapter</title>
+  </head>
+  <body>
+<!-- navbar -->
+    <div id="navbar-reuse"></div>
+<!-- Jumbotron -->
+
+    <div id="jumbo-con"></div>
+<!-- sub navbar -->
+    <div class="container px-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" id="aboutBC"><a href="#" id="about"><strong><span class="oi oi-clipboard"></span> &nbsp; Conference '19</strong></a></li>
+          <li class="breadcrumb-item" id="registerBC"><a href="#" id="register">Register</a></li>
+          <li class="breadcrumb-item" id="keynoteBC"><a href="#" id="keynote">Keynote Speakers</a></li>
+          <li class="breadcrumb-item" id="programmeBC"><a href="#" id="programme">Programme</a></li>
+          <li class="breadcrumb-item" id="localBC"><a href="#" id="local">Local Info <small><span class="oi oi-info"></span></small> </a></li>
+        </ol>
+      </nav>
+
+    </div>
+
+<!-- Keynote -->
+
+    <div id="content"></div>
+
+
+<!-- Footer -->
+    <div id="footer-reuse"></div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+  $(function(){
+    $('#navbar-reuse').load('components/navbar.html')
+  });
+</script>
+
+<script>
+  $(function(){
+    $('#jumbo-con').load('components/con_jumbo.html')
+  });
+</script>
+
+<script>
+  $(function(){
+    $('#footer-reuse').load('components/footer.html')
+  });
+</script>
+
+<script>
+
+  $(function(){
+    $('#content').load('conference/con_about.html')
+    $('#aboutBC').addClass("active");
+  });
+
+  $('#about').click(function(){
+    $('#content').load('con/con_about.html');
+    $('#aboutBC').addClass("active");
+    $('#registerBC').removeClass("active");
+    $('#keynoteBC').removeClass('active');
+    $('#programmeBC').removeClass('active');
+    $('#localBC').removeClass('active');
+  });
+
+  $('#register').click(function(){
+    $('#content').load('con/con_register.html');
+    $('#registerBC').addClass("active");
+    $('#aboutBC').removeClass("active");
+    $('#keynoteBC').removeClass('active');
+    $('#programmeBC').removeClass('active');
+    $('#localBC').removeClass('active');
+  });
+
+  $('#keynote').click(function(){
+    $('#content').load('con/con_keynote.html');
+    $('#keynoteBC').addClass("active");
+    $('#registerBC').removeClass("active");
+    $('#aboutBC').removeClass('active');
+    $('#programmeBC').removeClass('active');
+    $('#localBC').removeClass('active');
+  });
+
+  $('#programme').click(function(){
+    $('#content').load('con/con_programme.html');
+    $('#programmeBC').addClass("active");
+    $('#registerBC').removeClass("active");
+    $('#keynoteBC').removeClass('active');
+    $('#aboutBC').removeClass('active');
+    $('#localBC').removeClass('active');
+  });
+
+  $('#local').click(function(){
+    $('#content').load('con/con_local.html');
+    $('#localBC').addClass("active");
+    $('#registerBC').removeClass("active");
+    $('#keynoteBC').removeClass('active');
+    $('#programmeBC').removeClass('active');
+    $('#aboutBC').removeClass('active');
+  });
+  
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>
