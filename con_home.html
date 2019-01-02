@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="/images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
-    <title>Conference '19 | Oxford SIAM-IMA Oxford Student Chapter</title>
+    <title> 2019 Conference | Oxford SIAM-IMA Oxford Student Chapter</title>
   </head>
   <body>
 <!-- navbar -->
@@ -22,11 +23,11 @@
     <div class="container px-0">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item" id="aboutBC"><a href="#" id="about"><strong><span class="oi oi-clipboard"></span> &nbsp; Conference '19</strong></a></li>
-          <li class="breadcrumb-item" id="registerBC"><a href="#" id="register">Register</a></li>
-          <li class="breadcrumb-item" id="keynoteBC"><a href="#" id="keynote">Keynote Speakers</a></li>
-          <li class="breadcrumb-item" id="programmeBC"><a href="#" id="programme">Programme</a></li>
-          <li class="breadcrumb-item" id="localBC"><a href="#" id="local">Local Info <small><span class="oi oi-info"></span></small> </a></li>
+          <li class="breadcrumb-item" id="aboutBC"  ><a href="#" class="text-decoration-none" id="about"><span class="oi oi-clipboard"></span> &nbsp; Conference '19</a></li>
+          <li class="breadcrumb-item" id="registerBC"  ><a href="#" class="text-decoration-none" id="register">Register</a></li>
+          <li class="breadcrumb-item" id="keynoteBC"  ><a href="#" class="text-decoration-none" id="keynote">Keynote Speakers</a></li>
+          <li class="breadcrumb-item" id="programmeBC"  ><a href="#"  class="text-decoration-none"  id="programme">Programme</a></li>
+          <li class="breadcrumb-item" id="localBC"  ><a href="#"  class="text-decoration-none" id="local">Local info </a></li>
         </ol>
       </nav>
 
@@ -66,54 +67,54 @@
 
   $(function(){
     $('#content').load('conference/con_about.html')
-    $('#aboutBC').addClass("active");
+    $('#aboutBC').addClass("font-weight-bolder");
   });
 
   $('#about').click(function(){
-    $('#content').load('con/con_about.html');
-    $('#aboutBC').addClass("active");
-    $('#registerBC').removeClass("active");
-    $('#keynoteBC').removeClass('active');
-    $('#programmeBC').removeClass('active');
-    $('#localBC').removeClass('active');
+    $('#content').load('conference/con_about.html');
+    $('#aboutBC').addClass("font-weight-bolder");
+    $('#registerBC').removeClass("font-weight-bolder");
+    $('#keynoteBC').removeClass('font-weight-bolder');
+    $('#programmeBC').removeClass('font-weight-bolder');
+    $('#localBC').removeClass('font-weight-bolder');
   });
 
   $('#register').click(function(){
-    $('#content').load('con/con_register.html');
-    $('#registerBC').addClass("active");
-    $('#aboutBC').removeClass("active");
-    $('#keynoteBC').removeClass('active');
-    $('#programmeBC').removeClass('active');
-    $('#localBC').removeClass('active');
+    $('#content').load('conference/con_register.html');
+    $('#registerBC').addClass("font-weight-bolder");
+    $('#aboutBC').removeClass("font-weight-bolder");
+    $('#keynoteBC').removeClass('font-weight-bolder');
+    $('#programmeBC').removeClass('font-weight-bolder');
+    $('#localBC').removeClass('font-weight-bolder');
   });
 
   $('#keynote').click(function(){
-    $('#content').load('con/con_keynote.html');
-    $('#keynoteBC').addClass("active");
-    $('#registerBC').removeClass("active");
-    $('#aboutBC').removeClass('active');
-    $('#programmeBC').removeClass('active');
-    $('#localBC').removeClass('active');
+    $('#content').load('conference/con_keynote.html');
+    $('#keynoteBC').addClass("font-weight-bolder");
+    $('#registerBC').removeClass("font-weight-bolder");
+    $('#aboutBC').removeClass('font-weight-bolder');
+    $('#programmeBC').removeClass('font-weight-bolder');
+    $('#localBC').removeClass('font-weight-bolder');
   });
 
   $('#programme').click(function(){
-    $('#content').load('con/con_programme.html');
-    $('#programmeBC').addClass("active");
-    $('#registerBC').removeClass("active");
-    $('#keynoteBC').removeClass('active');
-    $('#aboutBC').removeClass('active');
-    $('#localBC').removeClass('active');
+    $('#content').load('conference/con_programme.html');
+    $('#programmeBC').addClass("font-weight-bolder");
+    $('#registerBC').removeClass("font-weight-bolder");
+    $('#keynoteBC').removeClass('font-weight-bolder');
+    $('#aboutBC').removeClass('font-weight-bolder');
+    $('#localBC').removeClass('font-weight-bolder');
   });
 
   $('#local').click(function(){
-    $('#content').load('con/con_local.html');
-    $('#localBC').addClass("active");
-    $('#registerBC').removeClass("active");
-    $('#keynoteBC').removeClass('active');
-    $('#programmeBC').removeClass('active');
-    $('#aboutBC').removeClass('active');
+    $('#content').load('conference/con_local.html');
+    $('#localBC').addClass("font-weight-bolder");
+    $('#registerBC').removeClass("font-weight-bolder");
+    $('#keynoteBC').removeClass('font-weight-bolder');
+    $('#programmeBC').removeClass('font-weight-bolder');
+    $('#aboutBC').removeClass('font-weight-bolder');
   });
-  
+
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
