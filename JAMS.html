@@ -7,8 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href="/images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link href="./images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
     <title>JAMS | Oxford SIAM-IMA Oxford Student Chapter</title>
   </head>
@@ -56,13 +56,13 @@
 
   $('#upcoming').click(function(){
     $('#seminars').load('php/future_seminars.php');
-    $('#upcomingbut').toggleClass("active");
-    $('#pastbut').toggleClass('active');
+    $('#upcomingbut').addClass("active");
+    $('#pastbut').removelass('active');
   });
   $('#past').click(function(){
     $('#seminars').load('php/past_seminars.php');
-    $('#upcomingbut').toggleClass('active');
-    $('#pastbut').toggleClass('active');
+    $('#upcomingbut').removeClass('active');
+    $('#pastbut').addClass('active');
   });
 </script>
 

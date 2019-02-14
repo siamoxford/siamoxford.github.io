@@ -5,7 +5,7 @@
 
   $file = new ical('https://calendar.google.com/calendar/ical/oxfordsiamchapter%40gmail.com/public/basic.ics');
   $icsEvents = array();
-  $icsEvents= $file->events();
+  $icsEvents= $file->eventsFromRange('1990/01/01', 'now');
   /* Here we are getting the timezone to get the event dates according to gio location */
 
   $dateNow = new DateTime("now");

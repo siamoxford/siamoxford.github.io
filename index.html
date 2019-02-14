@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
     <!-- icons -->
-    <link href="/images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link href="./images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
     <title>Oxford SIAM Student Chapter</title>
   </head>
@@ -46,16 +46,16 @@
 
           <div class="card-body py-4">
             <h4 class="card-title">2019 Student Conference</h4>
-            <p class="card-text">Our 10th annual student conference hosts an exciting array of talks.<br><br>
-              <span class="oi oi-calendar"></span>&nbsp; Wed 8 May 2019 <br> <span class="oi oi-map-marker"></span>&nbsp; Mathematical Institute, University of Oxford OX2 6GG <br> <span class="oi oi-british-pound"></span>&nbsp; Free </p>
+            <p class="card-text">Our 11th annual student conference hosts an exciting array of talks.<br><br>
+              <span class="oi oi-calendar"></span>&nbsp; Wed 1<sup>st</sup> May 2019 <br> <span class="oi oi-map-marker"></span>&nbsp; Mathematical Institute, Oxford <br> <span class="oi oi-british-pound"></span>&nbsp; Free </p>
             <div class="alert alert-success mt-4" role="alert">
-              Early bird registration deadline: <br><span class="oi oi-timer"></span> &nbsp; <strong>Fri 1 March 2019, 11:59pm</strong>.
+              Early bird registration deadline: <br><span class="oi oi-timer"></span> &nbsp; <strong>Fri 1 March 2019</strong>.
             </div>
           </div>
 
           <div class="card-footer pt-4">
             <p style="text-align: center">
-            <a href="./con_register.html" class="btn btn-primary">Details</a>
+            <a href="./con_home.html" class="btn btn-primary">Details</a>
             </p>
           </div>
         </div>
@@ -65,12 +65,15 @@
           <img class="card-img-top" src="https://www.maths.ox.ac.uk/system/files/styles/block/private/maths_gallery/DSC_6188.JPG?itok=fSF2yCNa" alt="Card image cap">
 
           <div class="card-body py-4">
-            <h4 class="card-title">Seminars</h4>
-            <p class="card-text">Come and give a talk at the Junior Applied Maths Seminar! Our next seminar is:</p>
+            <h4 class="card-title">Upcoming Junior Applied Maths Seminars</h4>
+            <hr>
+            <p class="card-text">
+              <div id="next_seminar"></div>
+            </p>
           </div>
           <div class="card-footer pt-4">
             <p style="text-align: center">
-            <a href="./events.html" class="btn btn-primary">Calendar</a>
+            <a href="./JAMS.html" class="btn btn-primary">Calendar</a>
             </p>
           </div>
         </div>
@@ -85,7 +88,12 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
 
+  $(function(){
+    $('#next_seminar').load('php/next_seminar.php')
+  });
+</script>
 <script>
   $(function(){
     $('#navbar-reuse').load('components/navbar.html')

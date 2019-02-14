@@ -8,8 +8,8 @@
     <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href="/images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link href="./images/icons/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
     <title> 2019 Conference | Oxford SIAM-IMA Oxford Student Chapter</title>
   </head>
@@ -23,11 +23,13 @@
     <div class="container px-0">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item" id="aboutBC"  ><a href="#" class="text-decoration-none" id="about"><span class="oi oi-clipboard"></span> &nbsp; Conference '19</a></li>
-          <li class="breadcrumb-item" id="registerBC"  ><a href="#" class="text-decoration-none" id="register">Register</a></li>
+          <li class="breadcrumb-item" id="registerBC"  ><a href="#" class="text-decoration-none" id="register"><span class="oi oi-clipboard"></span> &nbsp; Registration and Submissions</a></li>
           <li class="breadcrumb-item" id="keynoteBC"  ><a href="#" class="text-decoration-none" id="keynote">Keynote Speakers</a></li>
           <li class="breadcrumb-item" id="programmeBC"  ><a href="#"  class="text-decoration-none"  id="programme">Programme</a></li>
+          <li class="breadcrumb-item" id="participantBC"  ><a href="#"  class="text-decoration-none" id="participant">Participants</a></li>
           <li class="breadcrumb-item" id="localBC"  ><a href="#"  class="text-decoration-none" id="local">Local info </a></li>
+          <li class="breadcrumb-item" id="sponsorsBC"  ><a href="#"  class="text-decoration-none" id="sponsors">Sponsors </a></li>
+
         </ol>
       </nav>
 
@@ -66,8 +68,8 @@
 <script>
 
   $(function(){
-    $('#content').load('conference/con_about.html')
-    $('#aboutBC').addClass("font-weight-bolder");
+    $('#content').load('conference/con_register.html')
+    $('#registerBC').addClass("font-weight-bolder");
   });
 
   $('#about').click(function(){
@@ -77,6 +79,8 @@
     $('#keynoteBC').removeClass('font-weight-bolder');
     $('#programmeBC').removeClass('font-weight-bolder');
     $('#localBC').removeClass('font-weight-bolder');
+    $('#participantBC').removeClass('font-weight-bolder');
+    $('#sponsorsBC').removeClass('font-weight-bolder');
   });
 
   $('#register').click(function(){
@@ -86,6 +90,8 @@
     $('#keynoteBC').removeClass('font-weight-bolder');
     $('#programmeBC').removeClass('font-weight-bolder');
     $('#localBC').removeClass('font-weight-bolder');
+    $('#participantBC').removeClass('font-weight-bolder');
+    $('#sponsorsBC').removeClass('font-weight-bolder');
   });
 
   $('#keynote').click(function(){
@@ -95,6 +101,8 @@
     $('#aboutBC').removeClass('font-weight-bolder');
     $('#programmeBC').removeClass('font-weight-bolder');
     $('#localBC').removeClass('font-weight-bolder');
+    $('#participantBC').removeClass('font-weight-bolder');
+    $('#sponsorsBC').removeClass('font-weight-bolder');
   });
 
   $('#programme').click(function(){
@@ -104,6 +112,8 @@
     $('#keynoteBC').removeClass('font-weight-bolder');
     $('#aboutBC').removeClass('font-weight-bolder');
     $('#localBC').removeClass('font-weight-bolder');
+    $('#participantBC').removeClass('font-weight-bolder');
+    $('#sponsorsBC').removeClass('font-weight-bolder');
   });
 
   $('#local').click(function(){
@@ -113,6 +123,30 @@
     $('#keynoteBC').removeClass('font-weight-bolder');
     $('#programmeBC').removeClass('font-weight-bolder');
     $('#aboutBC').removeClass('font-weight-bolder');
+    $('#participantBC').removeClass('font-weight-bolder');
+    $('#sponsorsBC').removeClass('font-weight-bolder');
+  });
+
+  $('#participant').click(function(){
+    $('#content').load('conference/con_participant.html');
+    $('#participantBC').addClass("font-weight-bolder");
+    $('#registerBC').removeClass("font-weight-bolder");
+    $('#keynoteBC').removeClass('font-weight-bolder');
+    $('#programmeBC').removeClass('font-weight-bolder');
+    $('#aboutBC').removeClass('font-weight-bolder');
+    $('#localBC').removeClass('font-weight-bolder');
+    $('#sponsorsBC').removeClass('font-weight-bolder');
+  });
+
+  $('#sponsors').click(function(){
+    $('#content').load('conference/con_sponsors.html');
+    $('#sponsorsBC').addClass("font-weight-bolder");
+    $('#registerBC').removeClass("font-weight-bolder");
+    $('#keynoteBC').removeClass('font-weight-bolder');
+    $('#programmeBC').removeClass('font-weight-bolder');
+    $('#aboutBC').removeClass('font-weight-bolder');
+    $('#localBC').removeClass('font-weight-bolder');
+    $('#participantBC').removeClass('font-weight-bolder');
   });
 
 </script>
