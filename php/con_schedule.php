@@ -15,11 +15,12 @@
           /* Getting start date and time */
           $start = $icsEvent ['DTSTART'];
           $startDt = new DateTime ( $start );
-
+          $startDt->setTimeZone(new DateTimeZone('Europe/London'));
           $startTime = $startDt->format ( 'Hi' );
           /* Getting end time */
           $end = $icsEvent ['DTEND'];
           $endDt = new DateTime ( $end );
+          $endDt->setTimeZone(new DateTimeZone('Europe/London'));
           $endTime = $endDt->format ( 'Hi' );
           /* Getting the name of event */
           $eventName = $icsEvent['SUMMARY'];
